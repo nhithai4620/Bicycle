@@ -1,0 +1,85 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #252525;
+}
+
+.bicyle-container{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 350px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.bicyle-container .wheel{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 10px 15px -12px rgba(0,0,0,.3);
+}
+
+.bicyle-container .wheel .tire{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: 10px solid #151515;
+    z-index: 2;
+}
+
+.bicyle-container .wheel .rim{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    border:10px solid crimson;
+    z-index: 1;
+
+}
+
+.bicyle-container .wheel .spokes{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid crimson;
+    z-index: 1;
+    animation: rt 2s infinite linear;
+    background: rgba(200,100,100,.1) ;
+}
+
+.bicyle-container .wheel .spokes:nth-of-type(3){
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid crimson;
+    
+}
