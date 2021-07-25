@@ -8,6 +8,18 @@ body{
     background-color: #252525;
 }
 
+.name{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: crimson;
+    max-width: 250px;
+    height: 600px;
+}
+
 .bicyle-container{
     position: absolute;
     margin: auto;
@@ -169,3 +181,186 @@ body{
     z-index: 3;
 }
 
+
+.bicyle-container .chain-tube{
+    left: calc(120px /2);
+    width: 120px;
+}
+
+.bicyle-container .seat-tube-back{
+    left: calc(120px /2);
+    transform-origin: left;
+    transform: rotate(-60deg);
+    width: 120px;
+}
+
+.bicyle-container .seat-tube-front{
+    left: calc(120px /2);
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 120px;
+}
+
+
+.bicyle-container .seat-tube-post{
+    left: calc((120px / 2) - 20px);
+    transform-origin: right;
+    transform: rotate(60deg);
+    background: crimson;
+    z-index: 1;
+    height:calc(5px -1px);
+    width: 140px;
+}
+
+.bicyle-container .top-tube{
+    left: 120px;
+    bottom: initial;
+    top: 44px;
+    width: 113px; 
+}
+
+.bicyle-container .top-handlebar-tube{
+    right: 112px;
+    bottom: initial;
+    top: 25px;
+    width: 20px;
+    background: crimson;
+}
+
+.bicyle-container .top-handlebar-tube2{
+    right: 90px;
+    bottom: initial;
+    top: 25px;
+    width: 25px;
+    background: #151515;
+    border-radius: 0%;
+}
+
+.bicyle-container .down-tube{
+    left: calc(120px + 60px);
+    width: 100px;
+    transform-origin: left;
+    transform: rotate(-50deg);
+}
+
+.bicyle-container .head-tube{
+    right: calc(120px / 2);
+    transform-origin: right;
+    transform: rotate(60deg);
+    width: 140px;
+    background: crimson;
+    z-index: 1;
+    height: calc(5px -1px);
+}
+
+.bicyle-container .sandle{
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    left: 85px;
+    width: 50px;
+    height: 10px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 50%;
+    background: #151515;
+    z-index: 2;
+}
+
+.bicyle-container .handlebars{
+    position:absolute;
+    margin: auto;
+    top: 25px;
+    right: calc(100px / 2 + 25px);
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: 5px solid #151515;
+    border-right: 5px solid #151515;
+    border-bottom: 5px solid crimson;
+    z-index: 2;
+}
+
+.ground-container {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 200px;
+    overflow: hidden; 
+}
+
+.ground-container .ground{
+    position: absolute;
+    margin: auto;
+    animation: mv infinite linear;
+    background: crimson;
+    z-index: -1;
+}
+
+.ground-container .ground1{
+    bottom: 0;
+    right: -150px;
+    width: 100px;
+    height: 4px;
+    border-radius: 10px;
+    animation-duration: 3s;
+    z-index: 5;
+}
+
+.ground-container .ground1::before{
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: -60px;
+    left: 150px;
+    width: 40px;
+    height: 30px;
+    border-top-right-radius:  60%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 20%;
+    background: #151515;
+
+}
+
+.ground-container .ground3{
+    top: 50px;
+    right: -300px;
+    width: 100px;
+    height: 2px;
+    border-radius: 10px;
+    animation-duration: 3s;
+    z-index: 5;
+}
+
+.ground-container .ground3::before{
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: 10px;
+    left: -100px;
+    width: 10px;
+    height: 5px;
+    border-top-right-radius:  60%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 20%;
+    background: #151515;
+
+}
+
+
+@keyframes rt{
+   100%{
+       transform: rotate(360deg);
+   } 
+}
+
+@keyframes mv{
+    100%{
+        right: 900px;
+    }
+}
